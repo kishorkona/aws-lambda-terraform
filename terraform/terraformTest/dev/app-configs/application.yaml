@@ -1,0 +1,5 @@
+spring.main.web-application-type: none
+project.version: 1.0
+keyPair: /certs/aws-cert.jks
+user: dochinfsc
+trustedCA: /certs/keystore.jks
