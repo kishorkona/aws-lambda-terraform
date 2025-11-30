@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.Map;
 
 @Data
-public class TraceScheduledEvent {
+public class InputEvent {
     private String input;
     private String secretsName;
     private String action;

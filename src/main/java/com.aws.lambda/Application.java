@@ -2,7 +2,7 @@ package com.aws.lambda;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import com.aws.lambda.pojo.TraceScheduledEvent;
+import com.aws.lambda.pojo.InputEvent;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
@@ -15,14 +15,13 @@ import software.amazon.awssdk.services.secretsmanager.model.GetSecretValueReques
 import software.amazon.awssdk.services.secretsmanager.model.GetSecretValueResponse;
 
 import java.util.Map;
-import java.util.Optional;
 
 @Slf4j
-public class Application implements RequestHandler<TraceScheduledEvent, Object> {
+public class Application implements RequestHandler<InputEvent, Object> {
 
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     @Override
-    public Object handleRequest(TraceScheduledEvent traceScheduledEvent, Context context) {
+    public Object handleRequest(InputEvent inputEvent, Context context) {
         log.info("handleRequest called..");
         return "SUCCESS";
     }
